@@ -1,27 +1,52 @@
 import axios from "axios"
 
-export const obtenerEstudianteFachada= async(cedula)=>{
+export const obtenerEstudianteFachada = async (cedula) => {
   return await obtenerEstudianteAPI(cedula);
 }
 
-export const ingresarEstudianteFachada=(bodyEstudiante)=>{
-
-}
-export const actualizarEstudianteFachada=(bodyEstudiante, id)=>{
-
+export const obtenerEstudianteFachada2 = async (cedula) => {
+  return await obtenerEstudianteAPIAxios(cedula);
 }
 
-export const eliminarEstudianteFachada=(id)=>{
+
+export const ingresarEstudianteFachada = (bodyEstudiante) => {
+  ingresarEstudiante(bodyEstudiante);
+}
+export const actualizarEstudianteFachada = (bodyEstudiante, id) => {
+  actualizarEstudiante(bodyEstudiante,id);
+}
+
+export const eliminarEstudianteFachada = (id) => {
+ return eliminarEstudiante(id);
+}
+
+const obtenerEstudianteAPI = async (cedula) => {
+
+  const data = await fetch(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${cedula}`).then(r => r.json())
+  console.log(data)
+  return data;
 
 }
 
- const obtenerEstudianteAPI=async(cedula)=>{
+const obtenerEstudianteAPIAxios = async (cedula) => {
+  const data = axios.get(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${cedula}`).then(r => r.data)
+  return data
+}
 
-    const data = await fetch(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${cedula}`).then(r=>r.json())
-    console.log(data)
+
+const ingresarEstudiante = (bodyEstudiante) => {
+
+  axios.post(`http://localhost:8080/API/v1.0/Matricula/estudiantes`, bodyEstudiante).then(r => r.data)
+}
+
+const actualizarEstudiante = (bodyEstudiante, id) => {
+
+  axios.put(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}`, bodyEstudiante).then(r => r.data)
 
 }
 
-const obtenerEstudianteAPIAxios=(cedula)=>{
+const eliminarEstudiante = (id) => {
+
+ return  axios.delete(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${id}`).then(r => r.data)
 
 }
