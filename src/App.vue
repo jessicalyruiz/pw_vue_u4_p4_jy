@@ -1,10 +1,10 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <h2>App</h2>
-  <GuardaEstudiante/>
-  <Estudiante/>
-  <ActualizarEstudiante/>
-  <EliminarEstudiante/>
+   <NavBar/>
+    
+  
+  
 </template>
 
 <script>
@@ -13,6 +13,7 @@ import ActualizarEstudiante from './modules/estudiante/pages/ActualizarEstudiant
 import EliminarEstudiante from './modules/estudiante/pages/EliminarEstudiante.vue'
 import Estudiante from './modules/estudiante/pages/Estudiante.vue'
 import GuardaEstudiante from './modules/estudiante/pages/GuardaEstudiante.vue'
+import NavBar from './modules/estudiante/components/NavBar.vue';
 
 
 export default {
@@ -22,7 +23,8 @@ export default {
     Estudiante,
     GuardaEstudiante,
     ActualizarEstudiante,
-EliminarEstudiante
+EliminarEstudiante,
+NavBar
   }
 }
 </script>

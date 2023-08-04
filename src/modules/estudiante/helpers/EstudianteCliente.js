@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export const obtenerEstudianteFachada = async (cedula) => {
-  return await obtenerEstudianteAPI(cedula);
+  return  await obtenerEstudianteAPI(cedula);
 }
 
 export const obtenerEstudianteFachada2 = async (cedula) => {

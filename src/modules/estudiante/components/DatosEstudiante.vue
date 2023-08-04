@@ -12,6 +12,9 @@
 <script>
 import {obtenerEstudianteFachada2} from "../helpers/EstudianteCliente.js"
 export default {
+    props:{
+      cedulac:String,
+  },
     data(){
         return{
             cedula:null,
@@ -22,7 +25,7 @@ export default {
     },
     methods:{
         async consultarEstudiante(){
-            const estu=await obtenerEstudianteFachada2(this.cedula);
+            const estu=await obtenerEstudianteFachada2(this.cedulac);
             //this.estu=estu
             console.log("estudiante")
             //console.log(estu)
@@ -32,9 +35,18 @@ export default {
 
             console.log(this.apellido)
 
+            
+
 
 
         }
+    },
+    mounted(){
+       // this.consultarEstudiante()
+        const {cedula}=this.$route.params
+        const prov=this.$route.query.ciudad
+        console.log(prov)
+
     }
 
 }
