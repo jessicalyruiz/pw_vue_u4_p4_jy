@@ -1,0 +1,22 @@
+
+@font-face {
+    font-family: 'charlinda';
+    src: url('../assets/fonts/charlinda.ttf') format('truetype');
+ }
+ 
+ h1{
+    font-family: 'charlinda';
+    padding: 30px;
+    text-align: center;
+ }
+
+ button{
+    margin: 6px;
+    border-radius: 35px;
+    background-color: rgb(253, 222, 227);
+    box-shadow: 5px 5px 5px 1px;
+    padding: 5px 0;
+}
+.container{
+    display: grid;
+}

@@ -1,4 +1,5 @@
 <template>
+    <div class="container">
 <label for="id">Ingresa id</label>
 <input type="text" id="id" v-model="id">
   <label for="cedula">Ingresa la cedula</label>
@@ -10,7 +11,7 @@
   <label for="">Provincia</label>
   <input v-model ="provincia" name="" id="">
   <button @click="actualizarEstudiante">Actualizar</button>
-
+</div>
 </template>
 
 <script>

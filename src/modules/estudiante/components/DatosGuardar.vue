@@ -1,5 +1,6 @@
 <template>
   <h3>Datos estudiante</h3>
+  <div class="container">
 <label for="cedula">Ingresa la cedula</label>
 <input type="text" id="cedula" v-model="cedula">
  <label for="">Nombre</label>
@@ -9,7 +10,7 @@
   <label for="">Provincia</label>
   <input v-model ="provincia" name="" id="">
   <button @click="guardarEstudiante">Guardar</button>
-
+</div>
 </template>
 
 <script>

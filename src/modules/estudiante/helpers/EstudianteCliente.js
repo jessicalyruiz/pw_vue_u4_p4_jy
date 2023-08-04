@@ -30,6 +30,7 @@ const obtenerEstudianteAPI = async (cedula) => {
 
 const obtenerEstudianteAPIAxios = async (cedula) => {
   const data = axios.get(`http://localhost:8080/API/v1.0/Matricula/estudiantes/${cedula}`).then(r => r.data)
+  console.log(data)
   return data
 }
 

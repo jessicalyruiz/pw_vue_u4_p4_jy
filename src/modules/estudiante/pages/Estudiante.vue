@@ -1,5 +1,5 @@
 <template>
-<h1>Heloooooo</h1>
+
   <DatosEstudiante/>
 </template>
 

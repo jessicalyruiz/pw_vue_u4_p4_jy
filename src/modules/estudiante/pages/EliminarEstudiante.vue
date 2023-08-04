@@ -1,5 +1,6 @@
 <template>
   <h3>Eliminar</h3>
+  <div class="container">
   <label for="id">Ingresa id</label>
 <input type="text" id="id" v-model="id">
 <button @click="eliminarEstudiante">Eliminar</button>
@@ -12,7 +13,7 @@
   <input v-model ="apellido" name="" id="">
   <label for="">Provincia</label>
   <input v-model ="provincia" name="" id="">
-
+</div>
 
 </template>
 

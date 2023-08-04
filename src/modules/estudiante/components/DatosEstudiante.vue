@@ -1,5 +1,6 @@
 <template>
-<h3>Datos estudiante</h3>
+<h1>Consultar</h1>
+<div class="container">
 <label for="cedula">Ingresa la cedula</label>
 <input type="text" id="cedula" v-model="cedula">
 <button @click="consultarEstudiante">Consultar</button>
@@ -7,6 +8,7 @@
   <input v-model ="nombre" name="" id="">
    <label for="">Apellido</label>
   <input v-model ="apellido" name="" id="">
+</div>
 </template>
 
 <script>
@@ -22,6 +24,7 @@ export default {
     },
     methods:{
         async consultarEstudiante(){
+            console.log(this.cedula)
             const estu=await obtenerEstudianteFachada2(this.cedula);
             //this.estu=estu
             console.log("estudiante")
