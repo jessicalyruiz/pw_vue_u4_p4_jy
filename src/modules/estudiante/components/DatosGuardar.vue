@@ -9,7 +9,7 @@
   <input v-model ="apellido" name="" id="">
   <label for="">Provincia</label>
   <input v-model ="provincia" name="" id="">
-  <button @click="guardarEstudiante">Guardar</button>
+  <button class="btn btn-secondary" @click="guardarEstudiante">Guardar</button>
 </div>
 </template>
 
